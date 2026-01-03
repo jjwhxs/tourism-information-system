@@ -168,33 +168,6 @@ public Result<?> getOrderStatus(@RequestParam String orderNo) {
     
 }
 
-@Operation(summary = "获取订单统计信息")
-
-@GetMapping("/stats")
-
-public Result<?> getOrderStats() {
-
-    // 验证当前用户是否是管理员
-    User currentUser = JwtTokenUtils.getCurrentUser();
-    if (currentUser == null || !"ADMIN".equals(currentUser.getRoleCode())) {
-        return Result.error("无权访问");
-    }
-    
-    // 这里可以实现订单统计逻辑，比如按状态统计数量、总金额等
-    // 这里简单返回一个示例数据
-    Map<String, Object> stats = new HashMap<>();
-    stats.put("totalOrders", 100);
-    stats.put("totalAmount", 10000);
-    stats.put("pendingPayment", 20);
-    stats.put("paid", 70);
-    stats.put("cancelled", 8);
-    stats.put("refunded", 2);
-    stats.put("completed", 0);
-    
-    return Result.success(stats);
-    
-}
-
 @Operation(summary = "删除订单")
 
 @DeleteMapping("/{id}")
