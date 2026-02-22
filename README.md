@@ -213,8 +213,6 @@ public Result<?> deleteOrder(@PathVariable Long id) {
 
 ### 获取方式(可远程调试)
 
-访问链接(在浏览器中手动输入下图中的地址)：
-
-<img width="1129" height="124" alt="链接" src="https://github.com/user-attachments/assets/08a0244e-5d5d-4997-b374-de677198094a" />
+访问链接：https://mbd.pub/o/bread/mbd-YZWalpZsag==
 
 若资源获取失败，可添加happy35596339(vx)或2061772307(qq)进行交流
